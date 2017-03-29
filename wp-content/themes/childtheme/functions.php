@@ -6,10 +6,10 @@
 add_action( 'after_setup_theme', function() {
 
 	// register theme settings
-	// Theme_Settings::Register();
+	Theme_Settings::Register();
 
 	// register all models
-	//	Marker::Register();
+	FaqSection::Register();
 
 	// register all taxonomies
 	//	Taxonomy_Year::Register();
