@@ -1,4 +1,4 @@
-<main class="articles">
+<main class="articles container">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

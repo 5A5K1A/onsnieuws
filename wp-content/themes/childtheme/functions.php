@@ -29,10 +29,10 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	## Enqueue styles ##
 	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/css/app.min.css', '', '', 'screen' ); // main style
-	// wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/dist/css/print.min.css', '', '', 'print' ); // print style
+	wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/dist/css/print.min.css', '', '', 'print' ); // print style
 
 	## Enqueue scripts ##
-	// wp_enqueue_script( 'jquery'); // jQuery, in head
-	// wp_enqueue_script( 'vendor', get_stylesheet_directory_uri() . '/dist/js/vendor.min.js', array( 'jquery' ), '' ); // vendor scripts, in head
-	// wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/js/app.min.js', array( 'vendor' ), '', $in_footer = true ); // app scripts, in footer
+	wp_enqueue_script( 'jquery'); // jQuery, in head
+	wp_enqueue_script( 'vendor', get_stylesheet_directory_uri() . '/dist/js/vendor.min.js', array( 'jquery' ), '' ); // vendor scripts, in head
+	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/js/app.min.js', array( 'vendor' ), '', $in_footer = true ); // app scripts, in footer
 });
