@@ -24,3 +24,26 @@ add_filter('acf/fields/relationship/query', function( $args, $field, $post ) {
 	$args['post_status']  = 'publish';
 	return $args;
 }, 10, 3);
+
+/* Dynamically fill the metabox values
+/* ------------------------------------ */
+add_filter('acf/load_field/key=field_58db81fbe5018', function( $field ) {
+
+	// reset choices
+	$field['choices'] = array();
+
+	// get the choices from the Zendesk options page
+	$aZendesk = get_field('zendesk_faqsections', 'options');
+
+	foreach($aZendesk as $key => $aSection) {
+		# category_zendesk & category_name
+		$choices[$key] = $aSection['category_name'];
+	}
+	asort($choices);
+	$field['choices'] = $choices;
+
+	// return the field
+	return $field;
+
+});
+
