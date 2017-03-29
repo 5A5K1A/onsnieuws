@@ -1,13 +1,24 @@
-/* 
- * Import the Sass files
- */
+/*
+	This website is developed by:
+	studio5A2 (http://5A2.nl/)
+*/
 
-@import "base/variables"; // import vars first
-@import "utilities/mixins"; // then make mixins available
-@import "vendor/reset"; // http://meyerweb.com/eric/tools/css/reset/
+// Core variables
+@import "base/variables";
 
-// Glob all the Sass files
-@import "base/*";
-@import "components/*";
-@import "modules/*";
+// Bootstrap framework 3.3.5
+@import "vendor/bootstrap";
+
+// Socicon - the social icons font
+// source: http://www.socicon.com/chart.php
+//@import "vendor/socicon/socicon";
+
+// Animate.css - easy framework for css animations
+// source: http://daneden.me/animate
+// or for custom animations: http://matthewlein.com/ceaser/
+//@import "vendor/animate/animate";
+
+// studio framework
 @import "utilities/*";
+@import "base/*";
+@import "modules/*";

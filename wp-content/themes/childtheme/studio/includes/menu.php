@@ -2,7 +2,7 @@
 
 register_nav_menus( array(
     'primary'       => __( 'Primary Navigation', 'base' ),
-    'primary-right' => __( 'Primary Navigation (right)', 'base' ),    
+    'primary-right' => __( 'Primary Navigation (right)', 'base' ),
     'footer'        => __( 'Footer Navigation', 'base' ),
     'service'       => __( 'Service Navigation', 'base' ),
 ) );
@@ -29,7 +29,7 @@ add_filter('nav_menu_css_class', 'change_menu_classes', 100, 1);
 add_filter('page_css_class',     'change_menu_classes', 100, 1);
 
 /*
- * Adds archive pages from all posttypes to possible selections when building a menu 
+ * Adds archive pages from all posttypes to possible selections when building a menu
  * https://codeseekah.com/2012/03/01/custom-post-type-archives-in-wordpress-menus-2/#tldr
  */
 
@@ -42,8 +42,10 @@ function inject_cpt_archives_menu_meta_box() {
 // render custom post type archives meta box
 function wp_nav_menu_cpt_archives_meta_box() {
 	// get custom post types with archive support
-	$post_types = get_post_types( array( 'show_in_nav_menus' => true, 'has_archive' => true ), 'object' );    
-	
+	$post_types = get_post_types( array( 'show_in_nav_menus' => true, 'has_archive' => true ), 'object' );
+
+	$nav_menu_selected_id = getValue('menu');
+
 	// hydrate the necessary object properties for the walker
 	foreach ( $post_types as &$post_type ) {
 		$post_type->classes 	= array();
@@ -70,7 +72,7 @@ function wp_nav_menu_cpt_archives_meta_box() {
 
 		<p class="button-controls">
 			<span class="add-to-menu">
-		  		<input type="submit"<?php disabled( $nav_menu_selected_id, 0 ); ?> class="button-secondary right submit-add-to-menu" value="<?php esc_attr_e('Add to Menu'); ?>" name="add-ctp-archive-menu-item" id="submit-cpt-archive" />
+		  		<input type="submit" <?php disabled( $nav_menu_selected_id, 0 ); ?> class="button-secondary right submit-add-to-menu" value="<?php esc_attr_e('Add to Menu'); ?>" name="add-ctp-archive-menu-item" id="submit-cpt-archive" />
 				<span class="spinner"></span>
 			</span>
 		</p>
@@ -84,14 +86,14 @@ function cpt_archive_menu_filter( $items, $menu, $args ) {
 	// alter the URL for cpt-archive objects
 	foreach ( $items as &$item ) {
 		if ( $item->object != 'cpt-archive' ) continue;
-		
+
 		$item->url = get_post_type_archive_link( $item->type );
-	  
+
 		// set current
 		if ( get_query_var( 'post_type' ) == $item->type ) {
 			$item->classes []= 'current-menu-item';
 			$item->current = true;
 		}
-	} 
+	}
 	return $items;
 }

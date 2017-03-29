@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-<main class="articles archive" role="main">
+<main class="articles archive container" role="main">
 
 		<?php if (have_posts()) : ?>
 
@@ -50,7 +50,5 @@ get_header();
 ?>
 
 </main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

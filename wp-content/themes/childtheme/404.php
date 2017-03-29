@@ -6,7 +6,7 @@
 
 	get_header();
 ?>
-		<main class="articles">
+		<main class="articles container">
 			<article>
 				<h1>Oops! Deze pagina is niet gevonden</h1>
 				<p>

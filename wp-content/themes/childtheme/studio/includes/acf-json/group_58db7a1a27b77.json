@@ -1,0 +1,137 @@
+{
+    "key": "group_58db7a1a27b77",
+    "title": "Zendesk Settings",
+    "fields": [
+        {
+            "key": "field_58db995a47601",
+            "label": "Zendesk domain",
+            "name": "zendesk_domain",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "snappet",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58db998047602",
+            "label": "Zendesk locale",
+            "name": "zendesk_locale",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "nl",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58dbbb0400ce3",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Klik eerst op bijwerken om de secties op te halen van Zendesk",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_58dbba108b8c8",
+            "label": "Check settings (hiddem)",
+            "name": "check_settings",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "hidden",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_58db7a57c4ef8",
+            "label": "Selecteer Zendesk sectie(s)",
+            "name": "zendesk_sections",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58dbba108b8c8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "201736439": "Accounts - leerlingen verplaatsen - inloggegevens",
+                "201830755": "Contract: af- of bijbestellen en wijzigingen",
+                "201794035": "Dashboard - onderwijsplannen - lesstof",
+                "201794055": "Hardware: tablets en opladers",
+                "201794075": "Netwerk",
+                "201789565": "Overigen",
+                "115000404909": "Training en begeleiding",
+                "115000416765": "Uitlegpagina's en video's"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 1,
+            "return_format": "array",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "studio-zendesk"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1490796510
+}
