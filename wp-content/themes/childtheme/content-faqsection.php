@@ -1,6 +1,6 @@
 <?php $sSearchString = getValue('search'); ?>
 
-<main class="articles">
+<main class="articles container">
 
 	<?php if (have_posts()) : ?>
 
@@ -10,23 +10,22 @@
 
 		$oSearch = new Control_Zendesk_Search();
 		$oResponse = $oSearch->GetSearchResults($sSearchString);
+
 		if( $oResponse->error != TRUE ) :
 
-			foreach( (array)$oResponse->results as $key => $oResult ) : ?>
-	<div class="article-<?php echo $key; ?>">
-				<?php Template::Render( 'snippet-article', array('oArticle' => $oResult) ); ?>
-	</div>
-			<?php endforeach;
+			foreach( (array)$oResponse->results as $key => $oResult ) :
+				Template::Render( 'snippet-article', array('oArticle' => $oResult, 'sSectionId' => 'search') );
+			endforeach;
 
 		endif;
 
-	endif; ?>
-
-		<?php while (have_posts()) : the_post(); ?>
+		else :
+			while (have_posts()) : the_post(); ?>
 
 		<?php $aSections = get_field('show_section'); ?>
 
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+
 		<?php if( is_single() ) : ?>
 			<header>
 				<h1><?php the_title(); ?></h1>
@@ -53,7 +52,8 @@
 
 		</article>
 
-	<?php endwhile; ?>
+	<?php endwhile;
+	endif; ?>
 
 	<?php else : get_template_part('snippet', 'not-found'); endif; ?>
 </main>
