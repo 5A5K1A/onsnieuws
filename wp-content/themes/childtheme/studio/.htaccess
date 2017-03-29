@@ -1,0 +1,5 @@
+# hier moet een beveiliging op komen
+# deny alles in /studio/ behalve images
+<Files *.php>
+deny from all
+</Files>
