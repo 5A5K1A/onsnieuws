@@ -19,6 +19,21 @@ add_filter( 'get_search_form', function( $form ) {
 EOHTML;
 });
 
+function GetFaqSearchForm( $searchterm = NULL ) {
+	$placeholder = __('FAQ doorzoeken', 'studio');
+	if( $searchterm ) { $placeholder .= '" value="'.$searchterm; }
+	return <<<EOHTML
+		<form method="get" class="searchform" action="">
+			<div class="input-group">
+				<input name="search" type="search" class="form-control" placeholder="{$placeholder}">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</span>
+			</div>
+		</form>
+EOHTML;
+};
+
 /*  Add responsive container to embeds
 /* ------------------------------------ */
 function studio_embed_html( $html, $url, $attr ) {

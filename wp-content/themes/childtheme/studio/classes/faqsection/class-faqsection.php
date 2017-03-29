@@ -13,13 +13,14 @@ class FaqSection extends PostType {
 	protected $args = array(
 		'menu_icon' => 'dashicons-editor-help',
 		'labels'              => array(
-			'add_new_item'          => 'Nieuw FAQ Section',
-			'add_new'               => 'Nieuw FAQ Section',
-			'all_items'           	=> 'Alle FAQ Sections',
+			'add_new_item'          => 'Nieuwe Vragen sectie',
+			'add_new'               => 'Nieuwe Vragen sectie',
+			'all_items'           	=> 'Alle Vragen secties',
 		),
 		'exclude_from_search' => false,
 		'supports'            => array( 'title','editor', 'author' ),
+		'rewrite'             => array(
+			'slug'                => 'faq',
+		),
 	);
-
-
 }
