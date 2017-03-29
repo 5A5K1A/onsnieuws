@@ -18,6 +18,7 @@ class FaqSection extends PostType {
 			'all_items'           	=> 'Alle FAQ Sections',
 		),
 		'exclude_from_search' => false,
+		'supports'            => array( 'title','editor', 'author' ),
 	);
 
 
