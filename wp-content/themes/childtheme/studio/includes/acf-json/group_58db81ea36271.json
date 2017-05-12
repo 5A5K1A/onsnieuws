@@ -16,9 +16,9 @@
                 "id": ""
             },
             "choices": {
-                "0": "Accounts",
-                "2": "Contract",
-                "1": "Dashboard"
+                "201736439": "Accounts - leerlingen verplaatsen - inloggegevens",
+                "201794075": "Netwerk",
+                "115000416765": "Uitlegpagina's en video's"
             },
             "allow_custom": 0,
             "save_custom": 0,
@@ -26,6 +26,24 @@
             "layout": "vertical",
             "toggle": 0,
             "return_format": "array"
+        },
+        {
+            "key": "field_590c9d66ec21e",
+            "label": "Google Map",
+            "name": "google_map",
+            "type": "google_map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
+            "height": ""
         }
     ],
     "location": [
@@ -45,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1490792086
+    "modified": 1493998969
 }
