@@ -15,15 +15,11 @@
                 "class": "",
                 "id": ""
             },
-<<<<<<< HEAD
-            "choices": null,
-=======
             "choices": {
                 "201736439": "Accounts - leerlingen verplaatsen - inloggegevens",
                 "201794075": "Netwerk",
                 "115000416765": "Uitlegpagina's en video's"
             },
->>>>>>> afaf0cb16e707fef31a172f05faebd664f90a300
             "allow_custom": 0,
             "save_custom": 0,
             "default_value": [],
@@ -67,9 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-<<<<<<< HEAD
-    "modified": 1490816641
-=======
-    "modified": 1493998969
->>>>>>> afaf0cb16e707fef31a172f05faebd664f90a300
+    "modified": 1494816641
 }
