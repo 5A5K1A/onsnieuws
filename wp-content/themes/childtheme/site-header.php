@@ -9,7 +9,7 @@
 			</button>
 			<div class="navbar-brand">
 				<a class="logo" href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-vanons.png" alt="<?php bloginfo('name'); ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-vanons.png" alt="<?php _e('Logo van ', 'studio'); bloginfo('name'); ?>" />
 				</a>
 				<p title="<?php bloginfo('description'); ?>" class="description"><?php bloginfo('description'); ?></p>
 			</div>
@@ -41,4 +41,16 @@
 			?>
 		</div>
 	</nav>
+<?php
+	$sImage      = NULL;
+	if( has_post_thumbnail() ) {
+		$sImageSize  = 'header_image'; // @TODO frontend
+		$sImage      = wp_get_attachment_image( get_post_thumbnail_id(), $sImageSize, '', array('itemprop' => 'image', 'class' => 'todo_frontend') );
+	}
+
+	if( !empty($sImage) ) : ?>
+	<div class="image">
+		<?php echo $sImage; ?>
+	</div>
+<?php endif; ?>
 </header>
