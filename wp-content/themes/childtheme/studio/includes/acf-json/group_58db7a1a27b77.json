@@ -97,16 +97,7 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "201736439": "Accounts - leerlingen verplaatsen - inloggegevens",
-                "201830755": "Contract: af- of bijbestellen en wijzigingen",
-                "201794035": "Dashboard - onderwijsplannen - lesstof",
-                "201794055": "Hardware: tablets en opladers",
-                "201794075": "Netwerk",
-                "201789565": "Overigen",
-                "115000404909": "Training en begeleiding",
-                "115000416765": "Uitlegpagina's en video's"
-            },
+            "choices": null,
             "default_value": [],
             "allow_null": 0,
             "multiple": 1,
@@ -133,5 +124,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1490796510
+    "modified": 1490816619
 }
