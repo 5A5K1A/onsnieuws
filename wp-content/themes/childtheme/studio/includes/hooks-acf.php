@@ -3,6 +3,16 @@
 /* Hooks based on ACF fields
 /* ------------------------------------ */
 
+/* Register the Google API key
+/* ------------------------------------ */
+add_action('acf/init', function() {
+	acf_update_setting('google_api_key', GOOGLE_API_KEY);
+});
+add_filter('acf/fields/google_map/api', function( $api ){
+	$api['key'] = GOOGLE_API_KEY;
+	return $api;
+});
+
 /* Safe all ACF Pro in project repo
 /* ------------------------------------ */
 add_filter('acf/settings/save_json', function( $path ) {

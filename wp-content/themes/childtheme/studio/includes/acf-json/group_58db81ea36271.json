@@ -26,24 +26,6 @@
             "layout": "vertical",
             "toggle": 0,
             "return_format": "array"
-        },
-        {
-            "key": "field_590c9d66ec21e",
-            "label": "Google Map",
-            "name": "google_map",
-            "type": "google_map",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
         }
     ],
     "location": [
@@ -63,5 +45,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1494816641
+    "modified": 1494598452
 }
