@@ -18,7 +18,7 @@ class FaqSection extends PostType {
 			'all_items'           	=> 'Alle Vragen secties',
 		),
 		'exclude_from_search' => false,
-		'supports'            => array( 'title','editor', 'author' ),
+		'supports'            => array( 'title', 'editor', 'author', 'thumbnail' ),
 		'rewrite'             => array(
 			'slug'                => 'faq',
 		),
