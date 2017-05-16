@@ -10,7 +10,7 @@
 				<h1><?php the_title(); ?></h1>
 			</header>
 			<div class="entry">
-				<?php the_content('Read the rest of this entry &raquo;'); ?>
+				<?php the_content(); ?>
 			</div>
 		</article>
 

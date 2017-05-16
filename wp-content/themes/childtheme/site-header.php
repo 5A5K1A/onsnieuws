@@ -43,10 +43,9 @@
 	</nav>
 <?php
 	$sImage      = NULL;
-	if( has_post_thumbnail() ) {
-		$sImageSize  = 'header_image'; // @TODO frontend
-		$sImage      = wp_get_attachment_image( get_post_thumbnail_id(), $sImageSize, '', array('itemprop' => 'image', 'class' => 'todo_frontend') );
-	}
+	$sImageSize  = 'header_image';
+	$iImageID    = ( has_post_thumbnail() && is_single() ) ? get_post_thumbnail_id() : 6 ;
+	$sImage      = wp_get_attachment_image( $iImageID, $sImageSize, '', array('itemprop' => 'image', 'class' => 'todo_frontend') );
 
 	if( !empty($sImage) ) : ?>
 	<div class="image">

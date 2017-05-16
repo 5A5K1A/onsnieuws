@@ -4,19 +4,19 @@
 
 	<?php if (have_posts()) : ?>
 
-	<p>FAQ Search: <?php echo GetFaqSearchForm( $sSearchString ); ?></p>
+	<header>
+		<h1><?php _e('FAQ Search: ', 'studio'); ?></h1>
+		<p><?php echo GetFaqSearchForm( $sSearchString ); ?></p>
+	</header>
 
 	<?php if( !empty($sSearchString) ) :
-
-		$oSearch = new Control_Zendesk_Search();
+		$oSearch   = new Control_Zendesk_Search();
 		$oResponse = $oSearch->GetSearchResults($sSearchString);
 
 		if( $oResponse->error != TRUE ) :
-
 			foreach( (array)$oResponse->results as $key => $oResult ) :
 				Template::Render( 'snippet-article', array('oArticle' => $oResult, 'sSectionId' => 'search') );
 			endforeach;
-
 		endif;
 
 		else :

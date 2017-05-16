@@ -1,8 +1,9 @@
 html {
-	margin-top: 0 !important;
+	background-color: $brand-primary;
 }
 body {
 	text-rendering: optimizeLegibility;
+	background-color: $body-bg;
 }
 
 ul,

@@ -44,8 +44,22 @@
 
 .navbar-default .navbar-brand {
     height: auto;
+    max-height: 5em;
 }
 
 .navbar {
 	margin-bottom: 0;
+}
+
+.navbar-brand img {
+	max-height: 4em;
+}
+
+.navbar-nav .menu-item {
+	&.active a {
+		color: $brand-primary;
+	}
+	font-size: 1.3em;
+	font-weight: 600;
+	text-transform: uppercase;
 }
