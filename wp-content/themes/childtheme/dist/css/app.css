@@ -324,8 +324,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?version=1494916248724");
-  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix?version=1494916248724") format("embedded-opentype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff2?version=1494916248724") format("woff2"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff?version=1494916248724") format("woff"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.ttf?version=1494916248724") format("truetype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular?version=1494916248724") format("svg");
+  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?version=1495546400360");
+  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix?version=1495546400360") format("embedded-opentype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff2?version=1495546400360") format("woff2"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff?version=1495546400360") format("woff"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.ttf?version=1495546400360") format("truetype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular?version=1495546400360") format("svg");
 }
 
 .glyphicon {
@@ -8838,8 +8838,8 @@ a {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?version=1494916248724");
-  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix?version=1494916248724") format("embedded-opentype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff2?version=1494916248724") format("woff2"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff?version=1494916248724") format("woff"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.ttf?version=1494916248724") format("truetype");
+  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?version=1495546400360");
+  src: url("../img/../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix?version=1495546400360") format("embedded-opentype"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff2?version=1495546400360") format("woff2"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.woff?version=1495546400360") format("woff"), url("../img/../fonts/bootstrap/glyphicons-halflings-regular.ttf?version=1495546400360") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -8863,6 +8863,10 @@ ol.breadcrumb li + li:before {
 footer {
   color: #4aa950;
   padding: 30px;
+  width: 100%;
+}
+
+.site-header .image img {
   width: 100%;
 }
 
@@ -8983,4 +8987,8 @@ div[role=tabpanel] {
 
 .widgets li {
   list-style: none;
+}
+
+.woocommerce .attachment-shop_catalog {
+  border-radius: 5em 0;
 }
