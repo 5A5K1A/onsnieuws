@@ -23,14 +23,14 @@ class Control_Woocommerce_User_Create extends Control_Woocommerce {
 		if( $iUserId = email_exists($this->sUserEmail) ) {
 			p($iUserId);
 			// update user?? @todo
-			$this->Success('Useremail found - ID: '.$iUserId);
+			$this->Success('Existing useremail - ID: '.$iUserId);
 			exit;
 		}
 
 		if( $iUserId = username_exists($this->sUserName) ) {
            p($iUserId);
 			// update user?? @todo
-			$this->Success('Username found - ID: '.$iUserId);
+			$this->Success('Existing username found - ID: '.$iUserId);
 			exit;
 		}
 
