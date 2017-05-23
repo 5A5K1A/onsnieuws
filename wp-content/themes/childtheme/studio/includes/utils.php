@@ -70,3 +70,12 @@ function studio_get_link( $url, $text, $attr = NULL ) {
 function studio_link( $url, $text, $attr = NULL ) {
 	echo studio_get_link( $url, $text, $attr = NULL );
 }
+
+/**
+ * Sprinkle some salt on the string.
+ * @param      string  $string     The string
+ * @return     string  The salted string.
+ */
+function studio_get_salt( $string ) {
+	return md5(BEFORE_SALT.$string.AFTER_SALT);
+}

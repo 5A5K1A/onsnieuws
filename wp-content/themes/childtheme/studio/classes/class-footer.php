@@ -11,7 +11,7 @@ class Footer {
 
 				register_sidebar(array(
 					'id'            => 'footer-' . $i,
-					'name'          => __('Footer ' . $i, 'studio'),
+					'name'          => __('Footer ' . $i, THEME_SLUG),
 					'description'   => '',
 					'class'         => '',
 					'before_widget' => '<li id="%1$s" class="widget %2$s">',

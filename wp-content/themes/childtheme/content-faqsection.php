@@ -5,7 +5,7 @@
 	<?php if (have_posts()) : ?>
 
 	<header>
-		<h1><?php _e('FAQ Search: ', 'studio'); ?></h1>
+		<h1><?php _e('FAQ Search: ', THEME_SLUG); ?></h1>
 		<p><?php echo GetFaqSearchForm( $sSearchString ); ?></p>
 	</header>
 

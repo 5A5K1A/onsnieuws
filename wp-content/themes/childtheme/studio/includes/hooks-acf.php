@@ -96,7 +96,7 @@ add_filter('acf/load_field/key=field_58db81fbe5018', function( $field ) {
 	$field['choices'] = $choices;
 
 	// add instructions
-	$field['instructions'] = __("Can't find your section? Check the <a href=\"/wp-admin/admin.php?page=studio-zendesk\">Zendesk Settings</a> if it has been assigned.", 'studio');
+	$field['instructions'] = __("Can't find your section? Check the <a href=\"/wp-admin/admin.php?page=studio-zendesk\">Zendesk Settings</a> if it has been assigned.", THEME_SLUG);
 
 	// return the field
 	return $field;

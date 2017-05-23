@@ -6,7 +6,7 @@
 /* Customize the search form
 /* ------------------------------------ */
 add_filter( 'get_search_form', function( $form ) {
-	$sSearchHolder = __('Wat zoek je?', 'studio');
+	$sSearchHolder = __('Wat zoek je?', THEME_SLUG);
 	return <<<EOHTML
 		<form method="get" class="searchform" action="/">
 			<div class="input-group">
@@ -20,7 +20,7 @@ EOHTML;
 });
 
 function GetFaqSearchForm( $searchterm = NULL ) {
-	$placeholder = __('FAQ doorzoeken', 'studio');
+	$placeholder = __('FAQ doorzoeken', THEME_SLUG);
 	if( $searchterm ) { $placeholder .= '" value="'.$searchterm; }
 	return <<<EOHTML
 		<form method="get" class="searchform" action="">
@@ -229,7 +229,7 @@ add_filter( 'login_headerurl', function() { ?>
 /* Change the admin footer #sluikreclame
 /* ------------------------------------ */
 add_filter( 'admin_footer_text', function() {
-	echo '<span id="footer-thankyou">'.__('This website is developed by', 'studio').' <a href="https://www.5a2.nl/" target="_blank">studio 5A2</a> </span>';
+	echo '<span id="footer-thankyou">'.__('This website is developed by', THEME_SLUG).' <a href="https://www.5a2.nl/" target="_blank">studio 5A2</a> </span>';
 });
 
 /* Extra filter for the_title breakingpoints
@@ -244,27 +244,27 @@ add_action( 'admin_menu', function() {
 	global $menu;
 	global $submenu;
 	$menu[5][0] = 'Nieuws';
-	$submenu['edit.php'][5][0] 	= __('Nieuws', 'studio');
-	$submenu['edit.php'][10][0] = __('Nieuws toevoegen', 'studio');
-	$submenu['edit.php'][16][0] = __('Nieuws Tags', 'studio');
+	$submenu['edit.php'][5][0] 	= __('Nieuws', THEME_SLUG);
+	$submenu['edit.php'][10][0] = __('Nieuws toevoegen', THEME_SLUG);
+	$submenu['edit.php'][16][0] = __('Nieuws Tags', THEME_SLUG);
 });
 add_action( 'init', function() {
 	global $wp_post_types;
 	$labels = &$wp_post_types['post']->labels;
-	$labels->name 			= __('Nieuws', 'studio');
-	$labels->singular_name 	= __('Nieuws', 'studio');
-	$labels->all_items 		= __('Alle nieuws', 'studio');
-	$labels->add_new 		= __('Nieuws toevoegen', 'studio');
-	$labels->add_new_item 	= __('Nieuws toevoegen', 'studio');
-	$labels->edit_item 		= __('Bewerk nieuws', 'studio');
-	$labels->new_item 		= __('Nieuws', 'studio');
-	$labels->view_item 		= __('Bekijk Nieuws', 'studio');
-	$labels->search_items 	= __('Zoek nieuws', 'studio');
-	$labels->not_found 		= __('Geen nieuws gevonden', 'studio');
-	$labels->not_found_in_trash = __('Geen nieuws gevonden gevonden in de prullenbak', 'studio');
-	$labels->all_items 		= __('Alle nieuws', 'studio');
-	$labels->menu_name 		= __('Nieuws', 'studio');
-	$labels->name_admin_bar = __('Nieuws', 'studio');
+	$labels->name 			= __('Nieuws', THEME_SLUG);
+	$labels->singular_name 	= __('Nieuws', THEME_SLUG);
+	$labels->all_items 		= __('Alle nieuws', THEME_SLUG);
+	$labels->add_new 		= __('Nieuws toevoegen', THEME_SLUG);
+	$labels->add_new_item 	= __('Nieuws toevoegen', THEME_SLUG);
+	$labels->edit_item 		= __('Bewerk nieuws', THEME_SLUG);
+	$labels->new_item 		= __('Nieuws', THEME_SLUG);
+	$labels->view_item 		= __('Bekijk Nieuws', THEME_SLUG);
+	$labels->search_items 	= __('Zoek nieuws', THEME_SLUG);
+	$labels->not_found 		= __('Geen nieuws gevonden', THEME_SLUG);
+	$labels->not_found_in_trash = __('Geen nieuws gevonden gevonden in de prullenbak', THEME_SLUG);
+	$labels->all_items 		= __('Alle nieuws', THEME_SLUG);
+	$labels->menu_name 		= __('Nieuws', THEME_SLUG);
+	$labels->name_admin_bar = __('Nieuws', THEME_SLUG);
 });
 
 /* Hide certain admin sections for "simple users"

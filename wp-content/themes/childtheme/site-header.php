@@ -9,7 +9,7 @@
 			</button>
 			<div class="navbar-brand">
 				<a class="logo" href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-vanons.png" alt="<?php _e('Logo van ', 'studio'); bloginfo('name'); ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/img/logo-vanons.png" alt="<?php _e('Logo van ', THEME_SLUG); bloginfo('name'); ?>" />
 				</a>
 				<p title="<?php bloginfo('description'); ?>" class="description"><?php bloginfo('description'); ?></p>
 			</div>

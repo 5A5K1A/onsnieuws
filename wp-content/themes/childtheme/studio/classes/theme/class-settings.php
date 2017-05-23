@@ -8,8 +8,8 @@ class Theme_Settings {
 		if( function_exists('acf_add_options_page') ) {
 
 			acf_add_options_page(array(
-				'page_title' 	=> __('Instellingen Zendesk ', 'studio'),
-				'menu_title'	=> __('Zendesk', 'studio'),
+				'page_title' 	=> __('Instellingen Zendesk ', THEME_SLUG),
+				'menu_title'	=> __('Zendesk', THEME_SLUG),
 				'menu_slug' 	=> 'studio-zendesk',
 				'capability'	=> 'edit_posts',
 				'redirect'		=> false,

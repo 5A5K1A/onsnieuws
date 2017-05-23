@@ -15,7 +15,7 @@ class Control_Zendesk extends Control {
 
 		// @todo: extra security -> ACF Pro is required
 		if( !defined('ZD_SUBDOMAIN') || !defined('ZD_LOCALE') ) {
-			$message = __("First install ACF Pro! (or just provide the right settings)", 'studio');
+			$message = __("First install ACF Pro! (or just provide the right settings)", THEME_SLUG);
 			return $this->ErrorObject($message);
 			exit;
 		}

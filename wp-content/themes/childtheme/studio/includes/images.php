@@ -14,8 +14,8 @@ if( function_exists('add_image_size') ) {
 // editor images: https://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/
 add_filter('image_size_names_choose', function( $aSizes ) {
 	$aAddSizes = array(
-		'header_image' => __( 'Header image', 'studio' ),
-		'new_image' => __( 'New image', 'studio' ),
+		'header_image' => __( 'Header image', THEME_SLUG ),
+		'new_image' => __( 'New image', THEME_SLUG ),
 	);
 	$aNewSizes = array_merge( $aSizes, $aAddSizes );
 	return $aNewSizes;

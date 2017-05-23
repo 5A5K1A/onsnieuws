@@ -21,7 +21,7 @@ class Control_Zendesk_Section extends Control_Zendesk {
 		}
 		// display error if no sections are available
 		if( $oSectionData->count < 1 ) {
-			$message = __("There are no sections available.", 'studio');
+			$message = __("There are no sections available.", THEME_SLUG);
 			return $this->ErrorObject( $message );
 			exit;
 		}
@@ -62,7 +62,7 @@ class Control_Zendesk_Section extends Control_Zendesk {
 		}
 		// display error if no sections are available
 		if( $oArticleData->count < 1 ) {
-			$message = __("There are no articles available.", 'studio');
+			$message = __("There are no articles available.", THEME_SLUG);
 			return $this->ErrorObject($message);
 			exit;
 		}

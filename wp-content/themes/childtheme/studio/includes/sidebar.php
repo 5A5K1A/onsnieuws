@@ -3,7 +3,7 @@
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'id'            => 'sidebar',
-		'name'          => __('Sidebar', 'studio'),
+		'name'          => __('Sidebar', THEME_SLUG),
 		'description'   => '',
 		'class'         => '',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
