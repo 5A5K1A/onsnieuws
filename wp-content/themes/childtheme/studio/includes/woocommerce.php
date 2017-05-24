@@ -1,5 +1,16 @@
 <?php
 
+add_action( 'after_setup_theme', function() {
+    add_theme_support( 'woocommerce' );
+});
+
+add_action('woocommerce_before_main_content', function() {
+  echo '<main class="articles container">';
+}, 10);
+add_action('woocommerce_after_main_content', function() {
+  echo '</main>';
+}, 10);
+
 /**
  * WooCommerce Extra Feature
  * --------------------------
@@ -42,4 +53,3 @@ add_filter('woocommerce_checkout_fields', function( $fields ) {
     $fields['billing']['billing_city']['class'][0] = 'form-row-last';
     return $fields;
 });
-

@@ -1,6 +1,6 @@
 <?
 /**
- * Class to ...
+ * Class to programmaticly access some Woocommerce features
  */
 class Control_Woocommerce extends Control {
 	/**
