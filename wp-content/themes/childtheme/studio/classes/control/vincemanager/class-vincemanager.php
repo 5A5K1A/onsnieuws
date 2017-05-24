@@ -29,14 +29,14 @@ class Control_VinceManager extends Control {
 	}
 
 	private function ObtainToken() {
-		// access_token
-
+		$username = (get_option('options_vincemanager_username', false) != '') ? get_option('options_vincemanager_username', false) : VINCE_USER;
+		$password = (get_option('options_vincemanager_password', false) != '') ? get_option('options_vincemanager_password', false) : VINCE_PASS;
 
 		$aPostData = http_build_query(
 		    array(
 		        'grant_type' => 'password',
-				'username'   => VINCE_USER,
-				'password'   => VINCE_PASS
+				'username'   => $username,
+				'password'   => $password
 		    )
 		);
 

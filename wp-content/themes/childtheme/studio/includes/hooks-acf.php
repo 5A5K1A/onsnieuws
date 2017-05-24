@@ -55,7 +55,7 @@ add_action('acf/save_post', function() {
 
 /* Dynamically fill the Zendesk Settings faqsections values
 /* ------------------------------------ */
-add_filter('acf/load_field/key=field_58db7a57c4ef8', function( $field ) {
+add_filter('acf/load_field/key=key_zendesk_sections', function( $field ) {
 
 	// reset choices
 	$field['choices'] = array();
@@ -78,21 +78,23 @@ add_filter('acf/load_field/key=field_58db7a57c4ef8', function( $field ) {
 
 /* Dynamically fill the faqsection metabox values
 /* ------------------------------------ */
-add_filter('acf/load_field/key=field_58db81fbe5018', function( $field ) {
+add_filter('acf/load_field/key=key_show_section', function( $field ) {
 
 	// reset choices
-	$field['choices'] = array();
+	$field['choices'] = $choices = null;
 
 	// get the choices from the Zendesk options page
 	$aZendesk = get_field('zendesk_sections', 'options');
 
 	// loop sections to fill array for metabox
-	foreach( (array)$aZendesk as $aSection ) {
-		# category_zendesk & category_name
-		$choices[$aSection['value']] = $aSection['label'];
+	if( is_array($aZendesk) ) {
+		foreach( $aZendesk as $aSection ) {
+			# category_zendesk & category_name
+			$choices[$aSection['value']] = $aSection['label'];
+		}
+		// sort array
+		asort($choices);
 	}
-	// sort array
-	asort($choices);
 	$field['choices'] = $choices;
 
 	// add instructions
